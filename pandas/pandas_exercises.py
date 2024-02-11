@@ -9,7 +9,7 @@ debugMode = True
 # Load the data from the table into a pandas DataFrame
 from sqlite3 import connect
 engine = connect(':memory:')
-df = pd.read_csv('sales_data.csv', encoding='UTF-8')
+df = pd.read_csv('pandas/sales_data.csv', encoding='UTF-8')
 df.to_sql('sales', engine)
 
 if debugMode:
@@ -48,7 +48,6 @@ def assignment1() -> pd.DataFrame:
     #Return back the resulting dataframe.
   #'''
   #return None
-print(assignment1())
 if debugMode:
   print(f"{os.linesep}--------------")
   print("ASSIGNMENT 1:")
